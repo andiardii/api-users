@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "1a7221d3-e5e9-4c97-8ef0-8abbd2fe7a7d",
+		"name": "Dlab-Backend",
+		"description": "API Backend for Management User System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18871992"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGxhYi1iYWNrZW5kLnRlc3QvbG9naW4iLCJpYXQiOjE3MzA5MDM1NDAsImV4cCI6MTczMDkwNzE0MCwibmJmIjoxNzMwOTAzNTQwLCJqdGkiOiJVcXNobzM4RkJ1WWU0RXQ0Iiwic3ViIjoiMSIsInBydiI6ImE3NTdiZWZiOTc2MDY2ZDg3YjU2NTdiOTNiODQ0Zjc1NzNmMzZhNGMifQ.wmonHjoKWiX_WEjOlBpJVA0q_JW4zxQFIzb7vJixmRw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dlab-backend.test/users?page=1",
+					"protocol": "http",
+					"host": [
+						"dlab-backend",
+						"test"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Get User List"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGxhYi1iYWNrZW5kLnRlc3QvbG9naW4iLCJpYXQiOjE3MzA4OTE1OTMsImV4cCI6MTczMDg5NTE5MywibmJmIjoxNzMwODkxNTkzLCJqdGkiOiJlUXh6RDJadExGM1ZLUFZLIiwic3ViIjoiMSIsInBydiI6ImE3NTdiZWZiOTc2MDY2ZDg3YjU2NTdiOTNiODQ0Zjc1NzNmMzZhNGMifQ.8CkH8UXRZKmXNtArH6hkzi4GFUr3flbUUBeW5DKfYow",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dlab-backend.test/users/{id_here}",
+					"protocol": "http",
+					"host": [
+						"dlab-backend",
+						"test"
+					],
+					"path": [
+						"users",
+						"{id_here}"
+					]
+				},
+				"description": "Get User By Id"
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGxhYi1iYWNrZW5kLnRlc3QvbG9naW4iLCJpYXQiOjE3MzA4ODkwOTEsImV4cCI6MTczMDg5MjY5MSwibmJmIjoxNzMwODg5MDkxLCJqdGkiOiJrUFN6T0lWd3dDcDBDWXNYIiwic3ViIjoiMSIsInBydiI6ImE3NTdiZWZiOTc2MDY2ZDg3YjU2NTdiOTNiODQ0Zjc1NzNmMzZhNGMifQ.4yCTWpdR2wFFse-AG1ciHHyWpsfe7PhBU4G9t1OjTzg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\": \"Staff_1\",\r\n    \"email\": \"staff_1@example.com\",\r\n    \"umur\": 21,\r\n    \"password\": \"123456\",\r\n    \"status\": \"member\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dlab-backend.test/users",
+					"protocol": "http",
+					"host": [
+						"dlab-backend",
+						"test"
+					],
+					"path": [
+						"users"
+					]
+				},
+				"description": "Create New User"
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGxhYi1iYWNrZW5kLnRlc3QvbG9naW4iLCJpYXQiOjE3MzA4ODkwOTEsImV4cCI6MTczMDg5MjY5MSwibmJmIjoxNzMwODg5MDkxLCJqdGkiOiJrUFN6T0lWd3dDcDBDWXNYIiwic3ViIjoiMSIsInBydiI6ImE3NTdiZWZiOTc2MDY2ZDg3YjU2NTdiOTNiODQ0Zjc1NzNmMzZhNGMifQ.4yCTWpdR2wFFse-AG1ciHHyWpsfe7PhBU4G9t1OjTzg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\": \"Staff_2\",\r\n    \"email\": \"staff_2@example.com\",\r\n    \"umur\": 22,\r\n    \"password\": \"123456\",\r\n    \"status\": \"member\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dlab-backend.test/users/{id_here}",
+					"protocol": "http",
+					"host": [
+						"dlab-backend",
+						"test"
+					],
+					"path": [
+						"users",
+						"{id_here}"
+					]
+				},
+				"description": "Edit User By Id"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vZGxhYi1iYWNrZW5kLnRlc3QvbG9naW4iLCJpYXQiOjE3MzA4OTE1OTMsImV4cCI6MTczMDg5NTE5MywibmJmIjoxNzMwODkxNTkzLCJqdGkiOiJlUXh6RDJadExGM1ZLUFZLIiwic3ViIjoiMSIsInBydiI6ImE3NTdiZWZiOTc2MDY2ZDg3YjU2NTdiOTNiODQ0Zjc1NzNmMzZhNGMifQ.8CkH8UXRZKmXNtArH6hkzi4GFUr3flbUUBeW5DKfYow",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://dlab-backend.test/users/4",
+					"protocol": "http",
+					"host": [
+						"dlab-backend",
+						"test"
+					],
+					"path": [
+						"users",
+						"4"
+					]
+				},
+				"description": "Delete User By Id"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dlab-backend.test/login",
+					"protocol": "http",
+					"host": [
+						"dlab-backend",
+						"test"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "API Login"
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama\": \"John Doe\",\r\n    \"email\": \"admin1@example.com\",\r\n    \"umur\": 23,\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dlab-backend.test/register",
+					"protocol": "http",
+					"host": [
+						"dlab-backend",
+						"test"
+					],
+					"path": [
+						"register"
+					]
+				},
+				"description": "API Register"
+			},
+			"response": []
+		}
+	]
+}
